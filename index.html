@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,8 +83,8 @@ footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid 
 <header><div class="wrap">
   <div class="brand"><b>Yūki</b><span class="tag"> · Akihabara Tour Guide</span></div>
   <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-set="ja" aria-pressed="true">日本語</button>
-    <button type="button" data-set="en" aria-pressed="false">English</button>
+    <button type="button" data-set="en" aria-pressed="true">English</button>
+    <button type="button" data-set="ja" aria-pressed="false">日本語</button>
   </div>
 </div></header>
 
@@ -193,7 +193,7 @@ footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid 
   function set(l){root.lang=l;document.querySelectorAll('[data-set]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});try{localStorage.setItem('lang',l)}catch(e){}}
   var q=new URLSearchParams(location.search).get('lang'),saved=null;
   try{saved=localStorage.getItem('lang')}catch(e){}
-  set(q||saved||((navigator.language||'').toLowerCase().indexOf('ja')===0?'ja':'en'));
+  set(q||saved||'en');
   document.querySelectorAll('[data-set]').forEach(function(b){b.onclick=function(){set(b.dataset.set)}});
   document.querySelectorAll('[data-copy]').forEach(function(b){b.onclick=function(){
     var t=Array.from(document.querySelectorAll('#full-'+b.dataset.copy+' p')).map(function(p){return p.textContent}).join('\n\n');
