@@ -59,12 +59,9 @@ blockquote cite{display:block;font-style:normal;font-size:12px;color:var(--sub);
 .links{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .links a{display:flex;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:inherit}
 .links a span:last-child{color:var(--red)}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.gallery figure{margin:0}
-.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block}
-.gallery .wide{grid-column:span 2}
-.gallery .wide img{aspect-ratio:3/2}
-.gallery figcaption{font-size:12px;color:var(--sub);margin-top:4px;line-height:1.5}
+.ig{display:grid;gap:12px;justify-items:center}
+.ig .instagram-media{min-width:0!important;width:100%!important;max-width:540px!important;margin:0!important}
+.igbtn{display:block;text-align:center;margin-top:14px;border:1px solid var(--ink);border-radius:999px;padding:10px 14px;text-decoration:none;color:inherit;font-weight:600}
 .cards{display:grid;gap:10px}
 .lcard{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px;text-decoration:none;color:inherit}
 .lcard:hover{border-color:var(--ink)}
@@ -73,7 +70,7 @@ blockquote cite{display:block;font-style:normal;font-size:12px;color:var(--sub);
 .lcard .s{font-size:13px;color:var(--sub);line-height:1.5;margin-top:2px}
 .ota{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .ota a{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none;color:inherit}
-@media (min-width:640px){.gallery{grid-template-columns:repeat(3,1fr)}.gallery .wide{grid-column:span 3}.gallery .wide img{aspect-ratio:21/9}}
+@media (min-width:640px){mark{background:linear-gradient(transparent 58%,#ffe066 58%);color:inherit;padding:0 1px}
 footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
 @media (max-width:420px){.tag{display:none}.hero{grid-template-columns:96px 1fr;gap:14px}.hero img{width:96px;height:96px}.hero h1{font-size:24px}}
 </style>
@@ -108,31 +105,32 @@ footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid 
     <h2 data-l="ja">プロフィール</h2><h2 data-l="en">Profile</h2>
     <div class="short" data-l="ja">
       <div class="t">30秒の自己紹介</div>
-      <p>ガイドのユウキです。東京に住んでいて、2019年から秋葉原で海外のゲストを案内しています。アニメ・マンガ・ゲームは小学校に上がる前から好きで、秋葉原には中高生のころから通っています。今日は皆さんの好きな作品に合わせてお店を回ります。</p>
+      <p>ガイドのユウキです。東京に住んでいて、2019年から秋葉原で海外のゲストを案内しています。アニメ・マンガ・ゲームは<mark>小学校に上がる前から好き</mark>で、<mark>秋葉原には中高生のころから通っています</mark>。今日は<mark>皆さんの好きな作品に合わせて</mark>お店を回ります。</p>
     </div>
     <div class="short" data-l="en">
       <div class="t">30-second introduction</div>
-      <p>Hi, I'm Yūki, your guide today. I live in Tokyo and have been showing visitors around Akihabara since 2019. I've loved anime, manga and games since before I started school, and I've been coming to Akihabara since I was a teenager. Today we'll visit shops picked around the series you love.</p>
+      <p>Hi, I'm Yūki, your guide today. I live in Tokyo and have been showing visitors around Akihabara since 2019. I've loved anime, manga and games <mark>since before I started school</mark>, and I've been <mark>coming to Akihabara since I was a teenager</mark>. Today we'll visit shops <mark>picked around the series you love</mark>.</p>
     </div>
     <div id="full-ja" data-l="ja">
-      <p>ユウキは東京在住の秋葉原ツアーガイドです。アニメ・マンガ・ゲームは小学校に上がる前から好きで、秋葉原には中高生のころから通っています。これまでに観たアニメは1,500作品以上。</p>
-      <p>2019年からは、海外から来たゲストを秋葉原で案内しています。お客さまの多くはアメリカ・イギリス・カナダ・オーストラリアから。Airbnbでは171件のレビューで平均4.96、TripadvisorとViatorでは170件を超えるレビューがすべて星5です。</p>
-      <p>ツアーは代理店を通さず、下見から当日の案内までユウキ自身が行います。事前に好きな作品を聞いて、回るお店をその人に合わせて決めるのが特徴。レビューには、お子さんと親御さんの両方が楽しめたという声が多く並びます。賠償責任保険にも加入済みです。</p>
-      <p>もう一つの仕事はオンラインの日本語講師で、italkiでのレッスンは2,100回を超えました。2026年9月にはBusiness Insider Japanで、秋葉原ツアーガイドの仕事が紹介されています。</p>
+      <p>ユウキは東京在住の秋葉原ツアーガイドです。アニメ・マンガ・ゲームは<mark>小学校に上がる前から好き</mark>で、<mark>秋葉原には中高生のころから通っています</mark>。これまでに観たアニメは<mark>1,500作品以上</mark>。</p>
+      <p><mark>2019年からは</mark>、海外から来たゲストを秋葉原で案内しています。お客さまの多くはアメリカ・イギリス・カナダ・オーストラリアから。<mark>Airbnbでは171件のレビューで平均4.96</mark>、TripadvisorとViatorでは<mark>170件を超えるレビューがすべて星5</mark>です。</p>
+      <p>ツアーは<mark>代理店を通さず</mark>、下見から当日の案内までユウキ自身が行います。事前に好きな作品を聞いて、<mark>回るお店をその人に合わせて決める</mark>のが特徴。レビューには、<mark>お子さんと親御さんの両方が楽しめた</mark>という声が多く並びます。賠償責任保険にも加入済みです。</p>
+      <p>もう一つの仕事はオンラインの日本語講師で、italkiでのレッスンは2,100回を超えました。2026年9月には<mark>Business Insider Japanで</mark>、秋葉原ツアーガイドの仕事が紹介されています。</p>
     </div>
     <div id="full-en" data-l="en">
-      <p>Yūki is a Tokyo-based Akihabara tour guide. Yūki has loved anime, manga and games since before starting school, has been coming to Akihabara since high school, and has watched more than 1,500 anime series.</p>
-      <p>Since 2019, Yūki has guided visitors from abroad through Akihabara, mostly from the US, the UK, Canada and Australia. On Airbnb the tour holds a 4.96 rating from 171 reviews, and on Tripadvisor and Viator it has more than 170 reviews, all five stars.</p>
-      <p>There is no agency in between. Yūki scouts the shops and runs every tour in person. Before each tour, guests share the series they love, and the route is planned around that list. Many families write that the kids and the parents both had a great time. The tour is covered by liability insurance.</p>
-      <p>Yūki also teaches Japanese online and has given more than 2,100 lessons on italki. In September 2026, Business Insider Japan featured the work as an Akihabara tour guide.</p>
+      <p>Yūki is a Tokyo-based Akihabara tour guide. Yūki has loved anime, manga and games <mark>since before starting school</mark>, has been coming to Akihabara since high school, and has watched <mark>more than 1,500 anime series</mark>.</p>
+      <p><mark>Since 2019</mark>, Yūki has guided visitors from abroad through Akihabara, mostly from the US, the UK, Canada and Australia. On Airbnb the tour holds a <mark>4.96 rating from 171 reviews</mark>, and on Tripadvisor and Viator it has <mark>more than 170 reviews, all five stars</mark>.</p>
+      <p><mark>There is no agency in between</mark>. Yūki scouts the shops and runs every tour in person. Before each tour, guests share the series they love, and <mark>the route is planned around that list</mark>. Many families write that <mark>the kids and the parents both had a great time</mark>. The tour is covered by liability insurance.</p>
+      <p>Yūki also teaches Japanese online and has given more than 2,100 lessons on italki. In September 2026, <mark>Business Insider Japan featured</mark> the work as an Akihabara tour guide.</p>
     </div>
     <button class="copy" type="button" data-copy="ja" data-l="ja">プロフィール文をコピー</button>
     <button class="copy" type="button" data-copy="en" data-l="en">Copy profile text</button>
   </section>
 
   <section>
-    <h2 data-l="ja">ツアーの様子</h2><h2 data-l="en">On tour</h2>
-    <div class="gallery"><figure class="wide"><img src="img/hero.jpg" alt="Akihabara Electric Town" loading="lazy"><figcaption><span data-l="ja">秋葉原の電気街で</span><span data-l="en">Akihabara Electric Town</span></figcaption></figure><figure><img src="img/akiba.jpg" alt="Out in Akihabara" loading="lazy"><figcaption><span data-l="ja">秋葉原の街で</span><span data-l="en">Out in Akihabara</span></figcaption></figure><figure><img src="img/guide-yuki-cover.jpg" alt="With guests" loading="lazy"><figcaption><span data-l="ja">ゲストと記念撮影</span><span data-l="en">With guests</span></figcaption></figure><figure><img src="img/step2-shops.jpg" alt="Hunting for merch" loading="lazy"><figcaption><span data-l="ja">グッズ探し</span><span data-l="en">Hunting for merch</span></figcaption></figure><figure><img src="img/step3-seichi.jpg" alt="Visiting a spot from a series" loading="lazy"><figcaption><span data-l="ja">作品ゆかりの場所へ</span><span data-l="en">Visiting a spot from a series</span></figcaption></figure><figure><img src="img/step4-gift.jpg" alt="Today's finds" loading="lazy"><figcaption><span data-l="ja">手に入れたグッズ</span><span data-l="en">Today's finds</span></figcaption></figure><figure><img src="img/step5-next.jpg" alt="Pokémon taiyaki" loading="lazy"><figcaption><span data-l="ja">ポケモンのたい焼き</span><span data-l="en">Pokémon taiyaki</span></figcaption></figure><figure><img src="img/ig-1.jpg" alt="Card and goods shops" loading="lazy"><figcaption><span data-l="ja">カード・グッズ店</span><span data-l="en">Card and goods shops</span></figcaption></figure><figure><img src="img/ig-5.jpg" alt="Crane games" loading="lazy"><figcaption><span data-l="ja">クレーンゲーム</span><span data-l="en">Crane games</span></figcaption></figure><figure><img src="img/ig-6.jpg" alt="Arcade time" loading="lazy"><figcaption><span data-l="ja">ゲームセンター</span><span data-l="en">Arcade time</span></figcaption></figure><figure><img src="img/plush-wall.jpg" alt="Found a favorite" loading="lazy"><figcaption><span data-l="ja">お気に入りを見つけて</span><span data-l="en">Found a favorite</span></figcaption></figure><figure><img src="img/explore-feature.jpg" alt="Manga and anime shops" loading="lazy"><figcaption><span data-l="ja">マンガ・アニメのショップ</span><span data-l="en">Manga and anime shops</span></figcaption></figure><figure><img src="img/guests-group.jpg" alt="At the meeting point" loading="lazy"><figcaption><span data-l="ja">集合場所で</span><span data-l="en">At the meeting point</span></figcaption></figure><figure><img src="img/tour-group-street.jpg" alt="Walking the streets together" loading="lazy"><figcaption><span data-l="ja">みんなで街歩き</span><span data-l="en">Walking the streets together</span></figcaption></figure><figure><img src="img/explore-street.jpg" alt="Animate, rain or shine" loading="lazy"><figcaption><span data-l="ja">雨の日もアニメイトへ</span><span data-l="en">Animate, rain or shine</span></figcaption></figure><figure><img src="img/first-day-briefing.jpg" alt="Briefing before the tour" loading="lazy"><figcaption><span data-l="ja">ツアー前の打ち合わせ</span><span data-l="en">Briefing before the tour</span></figcaption></figure><figure><img src="img/skytree.jpg" alt="Tokyo Skytree at night" loading="lazy"><figcaption><span data-l="ja">夜のスカイツリー</span><span data-l="en">Tokyo Skytree at night</span></figcaption></figure></div>
+    <h2 data-l="ja">ツアーの様子（Instagram）</h2><h2 data-l="en">On tour (Instagram)</h2>
+    <div class="ig"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Deoo0GhE-ex/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Deoo0GhE-ex/" target="_blank" rel="noopener">Instagram</a></blockquote><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DecDy9yE0wf/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DecDy9yE0wf/" target="_blank" rel="noopener">Instagram</a></blockquote><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeWqOxik9ON/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DeWqOxik9ON/" target="_blank" rel="noopener">Instagram</a></blockquote><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeRmirqk4bm/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DeRmirqk4bm/" target="_blank" rel="noopener">Instagram</a></blockquote></div>
+    <a class="igbtn" href="https://www.instagram.com/yukianimesensei/" target="_blank" rel="noopener"><span data-l="ja">Instagramでもっと見る @yukianimesensei</span><span data-l="en">See more on Instagram @yukianimesensei</span></a>
   </section>
 
   <section>
@@ -204,5 +202,6 @@ footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid 
   }});
 })();
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
