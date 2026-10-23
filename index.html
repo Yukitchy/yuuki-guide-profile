@@ -59,6 +59,21 @@ blockquote cite{display:block;font-style:normal;font-size:12px;color:var(--sub);
 .links{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .links a{display:flex;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:inherit}
 .links a span:last-child{color:var(--red)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.gallery figure{margin:0}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block}
+.gallery .wide{grid-column:span 2}
+.gallery .wide img{aspect-ratio:3/2}
+.gallery figcaption{font-size:12px;color:var(--sub);margin-top:4px;line-height:1.5}
+.cards{display:grid;gap:10px}
+.lcard{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px;text-decoration:none;color:inherit}
+.lcard:hover{border-color:var(--ink)}
+.lcard img{width:96px;height:96px;object-fit:cover;border-radius:10px}
+.lcard .h{font-weight:700;line-height:1.4}
+.lcard .s{font-size:13px;color:var(--sub);line-height:1.5;margin-top:2px}
+.ota{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.ota a{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none;color:inherit}
+@media (min-width:640px){.gallery{grid-template-columns:repeat(3,1fr)}.gallery .wide{grid-column:span 3}.gallery .wide img{aspect-ratio:21/9}}
 footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid var(--line)}
 @media (max-width:420px){.tag{display:none}.hero{grid-template-columns:96px 1fr;gap:14px}.hero img{width:96px;height:96px}.hero h1{font-size:24px}}
 </style>
@@ -116,10 +131,25 @@ footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid 
   </section>
 
   <section>
-    <h2 data-l="ja">秋葉原で</h2><h2 data-l="en">In Akihabara</h2>
-    <div class="photos">
-      <img src="img/akiba.jpg" alt="Yūki in Akihabara holding an otaku sign" loading="lazy">
-      <img src="img/skytree.jpg" alt="Yūki with Tokyo Skytree at night" loading="lazy">
+    <h2 data-l="ja">ツアーの様子</h2><h2 data-l="en">On tour</h2>
+    <div class="gallery"><figure class="wide"><img src="img/hero.jpg" alt="Akihabara Electric Town" loading="lazy"><figcaption><span data-l="ja">秋葉原の電気街で</span><span data-l="en">Akihabara Electric Town</span></figcaption></figure><figure><img src="img/akiba.jpg" alt="Out in Akihabara" loading="lazy"><figcaption><span data-l="ja">秋葉原の街で</span><span data-l="en">Out in Akihabara</span></figcaption></figure><figure><img src="img/guide-yuki-cover.jpg" alt="With guests" loading="lazy"><figcaption><span data-l="ja">ゲストと記念撮影</span><span data-l="en">With guests</span></figcaption></figure><figure><img src="img/step2-shops.jpg" alt="Hunting for merch" loading="lazy"><figcaption><span data-l="ja">グッズ探し</span><span data-l="en">Hunting for merch</span></figcaption></figure><figure><img src="img/step3-seichi.jpg" alt="Visiting a spot from a series" loading="lazy"><figcaption><span data-l="ja">作品ゆかりの場所へ</span><span data-l="en">Visiting a spot from a series</span></figcaption></figure><figure><img src="img/step4-gift.jpg" alt="Today's finds" loading="lazy"><figcaption><span data-l="ja">手に入れたグッズ</span><span data-l="en">Today's finds</span></figcaption></figure><figure><img src="img/step5-next.jpg" alt="Pokémon taiyaki" loading="lazy"><figcaption><span data-l="ja">ポケモンのたい焼き</span><span data-l="en">Pokémon taiyaki</span></figcaption></figure><figure><img src="img/ig-1.jpg" alt="Card and goods shops" loading="lazy"><figcaption><span data-l="ja">カード・グッズ店</span><span data-l="en">Card and goods shops</span></figcaption></figure><figure><img src="img/ig-5.jpg" alt="Crane games" loading="lazy"><figcaption><span data-l="ja">クレーンゲーム</span><span data-l="en">Crane games</span></figcaption></figure><figure><img src="img/ig-6.jpg" alt="Arcade time" loading="lazy"><figcaption><span data-l="ja">ゲームセンター</span><span data-l="en">Arcade time</span></figcaption></figure><figure><img src="img/plush-wall.jpg" alt="Found a favorite" loading="lazy"><figcaption><span data-l="ja">お気に入りを見つけて</span><span data-l="en">Found a favorite</span></figcaption></figure><figure><img src="img/explore-feature.jpg" alt="Manga and anime shops" loading="lazy"><figcaption><span data-l="ja">マンガ・アニメのショップ</span><span data-l="en">Manga and anime shops</span></figcaption></figure><figure><img src="img/guests-group.jpg" alt="At the meeting point" loading="lazy"><figcaption><span data-l="ja">集合場所で</span><span data-l="en">At the meeting point</span></figcaption></figure><figure><img src="img/tour-group-street.jpg" alt="Walking the streets together" loading="lazy"><figcaption><span data-l="ja">みんなで街歩き</span><span data-l="en">Walking the streets together</span></figcaption></figure><figure><img src="img/explore-street.jpg" alt="Animate, rain or shine" loading="lazy"><figcaption><span data-l="ja">雨の日もアニメイトへ</span><span data-l="en">Animate, rain or shine</span></figcaption></figure><figure><img src="img/first-day-briefing.jpg" alt="Briefing before the tour" loading="lazy"><figcaption><span data-l="ja">ツアー前の打ち合わせ</span><span data-l="en">Briefing before the tour</span></figcaption></figure><figure><img src="img/skytree.jpg" alt="Tokyo Skytree at night" loading="lazy"><figcaption><span data-l="ja">夜のスカイツリー</span><span data-l="en">Tokyo Skytree at night</span></figcaption></figure></div>
+  </section>
+
+  <section>
+    <h2 data-l="ja">ツアーとレッスン</h2><h2 data-l="en">Tours and lessons</h2>
+    <div class="cards">
+      <a class="lcard" href="https://www.animesenseijp.com/tours/akiba-anime-tour/" target="_blank" rel="noopener"><img src="img/hero.jpg" alt="" loading="lazy"><div><div class="h"><span data-l="ja">秋葉原アニメツアー（英語・貸切）</span><span data-l="en">Private Akihabara Anime Tour</span></div><div class="s"><span data-l="ja">好きな作品に合わせて回る、いちばん人気のツアー</span><span data-l="en">The main tour, planned around the series you love</span></div></div></a>
+      <a class="lcard" href="https://www.animesenseijp.com/tours/custom/" target="_blank" rel="noopener"><img src="img/explore-feature.jpg" alt="" loading="lazy"><div><div class="h"><span data-l="ja">オーダーメイドツアー</span><span data-l="en">Custom anime tours</span></div><div class="s"><span data-l="ja">秋葉原以外も含めて、行き先から一緒に組むプラン</span><span data-l="en">Tokyo itineraries built from scratch, beyond Akihabara</span></div></div></a>
+      <a class="lcard" href="https://www.animesenseijp.com/tours/private/" target="_blank" rel="noopener"><img src="img/tour-group-street.jpg" alt="" loading="lazy"><div><div class="h"><span data-l="ja">東京プライベートツアー</span><span data-l="en">Private Tokyo tour with a local guide</span></div><div class="s"><span data-l="ja">地元ガイドと回る東京</span><span data-l="en">See Tokyo with a local</span></div></div></a>
+      <a class="lcard" href="https://www.animesenseijp.com/tips/" target="_blank" rel="noopener"><img src="img/ig-6.jpg" alt="" loading="lazy"><div><div class="h"><span data-l="ja">秋葉原・東京の歩き方ガイド</span><span data-l="en">Guides to Akihabara and Tokyo</span></div><div class="s"><span data-l="ja">ゲームセンター、カードショップ、メイドカフェなどの解説記事</span><span data-l="en">Articles on arcades, card shops, maid cafés and more</span></div></div></a>
+      <a class="lcard" href="https://www.animesenseijp.com/1on1/" target="_blank" rel="noopener"><img src="img/lesson-online.jpg" alt="" loading="lazy"><div><div class="h"><span data-l="ja">オンライン日本語レッスン（1対1）</span><span data-l="en">One-to-one online Japanese lessons</span></div><div class="s"><span data-l="ja">アニメを入り口に日本語を学ぶレッスン</span><span data-l="en">Learn Japanese through the anime you love</span></div></div></a>
+      <a class="lcard" href="https://www.animesenseijp.com/sensei/" target="_blank" rel="noopener"><img src="img/yuuki.jpg" alt="" loading="lazy"><div><div class="h"><span data-l="ja">ガイドについて（公式サイト）</span><span data-l="en">About the guide (official site)</span></div><div class="s">animesenseijp.com</div></div></a>
+    </div>
+    <div class="ota">
+      <span data-l="ja" style="font-size:13px;color:var(--sub);width:100%">レビューはこちらでも読めます</span><span data-l="en" style="font-size:13px;color:var(--sub);width:100%">Read more reviews</span>
+      <a href="https://www.airbnb.com/experiences/386416" target="_blank" rel="noopener">Airbnb</a>
+      <a href="https://www.viator.com/tours/Tokyo/Akiba-Tailor-made-Tour-for-Anime-Fans/d334-176858P1" target="_blank" rel="noopener">Viator / Tripadvisor</a>
+      <a href="https://www.getyourguide.com/tokyo-l193/akihabara-tailor-made-tour-for-anime-fans-t708709/" target="_blank" rel="noopener">GetYourGuide</a>
     </div>
   </section>
 
@@ -146,10 +176,9 @@ footer{padding:28px 0 48px;color:var(--sub);font-size:13px;border-top:1px solid 
   </section>
 
   <section>
-    <h2 data-l="ja">リンク</h2><h2 data-l="en">Links</h2>
+    <h2 data-l="ja">SNS・その他</h2><h2 data-l="en">Social and more</h2>
     <ul class="links">
-      <li><a href="https://www.animesenseijp.com/tours/akiba-anime-tour/" target="_blank" rel="noopener"><span data-l="ja">秋葉原アニメツアー</span><span data-l="en">Akihabara Anime Tour</span><span>→</span></a></li>
-      <li><a href="https://www.animesenseijp.com/sensei/" target="_blank" rel="noopener"><span data-l="ja">ガイドについて（公式サイト）</span><span data-l="en">About the guide</span><span>→</span></a></li>
+      <li><a href="https://lesson.animesenseijp.com/" target="_blank" rel="noopener"><span data-l="ja">レッスン予約サイト</span><span data-l="en">Lesson booking site</span><span>→</span></a></li>
       <li><a href="https://www.instagram.com/yukianimesensei/" target="_blank" rel="noopener"><span>Instagram @yukianimesensei</span><span>→</span></a></li>
       <li><a href="https://x.com/yukianimesensei" target="_blank" rel="noopener"><span>X @yukianimesensei</span><span>→</span></a></li>
       <li><a href="https://www.youtube.com/channel/UCvvTaNjmQBB08ur2N8DIhhg" target="_blank" rel="noopener"><span>YouTube</span><span>→</span></a></li>
